@@ -15,7 +15,7 @@ class Notifier < ActionMailer::Base
 end
 
 class MarkerbTest < ActiveSupport::TestCase
-  test 'dual template with .merb' do
+  test 'dual template with .markerb' do
     email = Notifier.contact("you@example.com")
     assert_equal 2, email.parts.size
     assert_equal "multipart/alternative", email.mime_type
