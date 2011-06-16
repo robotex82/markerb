@@ -14,15 +14,15 @@ The usage is quite simple. Assuming you have a notifier as below:
       end
     end
 
-If you create a template at +app/views/notifier/contact.markerb+:
+If you create a template at <code>app/views/notifier/contact.markerb</code>:
 
     Multipart templates **rocks**, right <%= @recipient %>?!
 
-It will generate two parts, one in text and another in html when delivered. Before you go, here are a few things you might need to know:
+It will generate two parts, one in text and another in html when delivered. Before we finish, here are a few things you might need to know:
 
 * The "contact.markerb" template should not have a format in its name. Adding a format would make it unavailable to be rendered in different formats;
 
-* The order of the parts matter. It is important you call +format.text+ before you call +format.html+;
+* The order of the parts matter. It is important for e-mail clients that you call <code>format.text</code> before you call <code>format.html</code>;
 
 * Notice you can normally use ERb inside the template.
 
