@@ -14,7 +14,7 @@ module Markerb
     def call(template)
       compiled_source = erb_handler.call(template)
       if template.formats.include?(:html)
-        "Redcarpet.new(begin;#{compiled_source};end, *Markerb.processing_options).to_html".html_safe
+        "Redcarpet.new(begin;#{compiled_source};end, *Markerb.processing_options).to_html.html_safe"
       else
         compiled_source
       end
