@@ -17,7 +17,7 @@ module Markerb
         # "Redcarpet.new(begin;#{compiled_source};end, *Markerb.processing_options).to_html.html_safe"
         # Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true, :tables => true, *Markerb.processing_options).render(compiled_source).html_safe
         # "Redcarpet::Markdown.new(Redcarpet::Render::HTML, *Markerb.processing_options).render(begin;#{compiled_source};end).html_safe"
-        "Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true, :tables => true).render(begin;#{compiled_source};end).html_safe"
+        "Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true, :tables => true).render(begin;#{compiled_source};end).html_safe".html_safe
       else
         compiled_source
       end
